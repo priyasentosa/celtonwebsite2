@@ -15,7 +15,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   padding: 10px 60px;
   background-color: transparent;
   position: sticky;
@@ -112,3 +112,4 @@ footer {
   color: #aab3c9;
   border-top: 1px solid #1f2a4a;
 }
+
