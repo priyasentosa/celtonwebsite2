@@ -4,15 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Celton Semiconductors | Architecting Intelligence</title>
-  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="stylesheet" href="styles.css?v=3" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 </head>
 <body>
 
   <!-- Background video -->
   <div class="video-bg" aria-hidden="true">
-    <video id="bg-video" autoplay muted playsinline loop preload="metadata"
-           poster="poster.jpg">
+    <video id="bg-video" autoplay muted playsinline loop preload="metadata" poster="poster.jpg">
       <source src="vecteezy_cinematic-abstract-motion-background-no-cgi-used-0575_1618829.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -36,24 +35,33 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero" role="main">
     <div class="hero-inner">
-      <h1 class="hero-title">
-        Architecting Intelligence<br />
-        across the semiconductor ecosystem
-      </h1>
 
-      <p class="hero-subtitle">
-        Reimagine how chips are mastered, designed, and built — our triple-engine
-        approach makes us the first to integrate cognitive semiconductor knowledge systems, AI-driven
-        design automation, and chip design for next-gen energy applications —
-        all under one unified vision.
-      </p>
+      <!-- Left: Text -->
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Architecting Intelligence<br />
+          across the semiconductor ecosystem
+        </h1>
 
-      <div class="buttons">
-        <a href="platforms.html" class="btn primary">Discover Our Solutions</a>
-        <a href="contact.html" class="btn secondary">Partner With Us</a>
+        <p class="hero-subtitle">
+          Reimagine how chips are mastered, designed, and built — our triple-engine
+          approach makes us the first to integrate cognitive semiconductor knowledge
+          systems, AI-driven design automation, and chip design for next-gen energy
+          applications — all under one unified vision.
+        </p>
+
+        <div class="buttons">
+          <a href="platforms.html" class="btn primary">Discover Our Solutions</a>
+          <a href="contact.html" class="btn secondary">Partner With Us</a>
+        </div>
+      </div>
+
+      <!-- Right: Celton Triad -->
+      <div class="hero-image">
+        <img src="celton_triad_2_nobg.png" alt="The Celton Triad" />
       </div>
     </div>
   </section>
@@ -63,8 +71,8 @@
     <p>© 2025 Celton Semiconductors. All rights reserved.</p>
   </footer>
 
-  <!-- Nudge some mobile browsers to start the video after tab switch -->
   <script>
+    // Resume video on tab switch (mobile fix)
     const v = document.getElementById('bg-video');
     document.addEventListener('visibilitychange', () => {
       if (!document.hidden && v && v.paused) v.play().catch(()=>{});
